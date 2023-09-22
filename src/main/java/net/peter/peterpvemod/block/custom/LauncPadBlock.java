@@ -69,9 +69,6 @@ public class LauncPadBlock extends Block implements SimpleWaterloggedBlock {
 
     @Override
     public void stepOn(Level level, BlockPos blockPos, BlockState state, Entity entity){
-        double moveX = 0;
-        double moveZ = 0;
-        double speed = 0.25F;
         if (!entity.isCrouching()) {
             //Copied code from minecraft jump logic on liveable entity
             float f = entity.getYRot() * ((float)Math.PI / 180F);
