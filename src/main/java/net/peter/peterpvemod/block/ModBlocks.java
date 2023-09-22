@@ -24,9 +24,9 @@ public class ModBlocks {
 
     //Then after making registerblock I can register the block and it will register itself and an item along side it also DropExperience block takes a range and drops experience between that
     public static final RegistryObject<Block> REINFORCED_CONCRETE = registerBlock("reinforced_concrete",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).explosionResistance(999).strength(90f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModTab.PETER_PVE_MOD_TAB);
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).explosionResistance(999).strength(30f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModTab.PETER_PVE_MOD_TAB);
 
-    public static final RegistryObject<Block> CAMO_BLOCK = registerBlock("camo", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(20f).noCollission()), ModCreativeModTab.PETER_PVE_MOD_TAB);
+    public static final RegistryObject<Block> CAMO_BLOCK = registerBlock("camo", () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES).strength(2f).noCollission().requiresCorrectToolForDrops()), ModCreativeModTab.PETER_PVE_MOD_TAB);
 
     public static void register(IEventBus eventBus){
         BLOCKS.register(eventBus);
