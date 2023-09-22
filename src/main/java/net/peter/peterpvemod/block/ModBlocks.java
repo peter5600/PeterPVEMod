@@ -14,6 +14,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.peter.peterpvemod.PeterPVEMod;
+import net.peter.peterpvemod.block.custom.LauncPadBlock;
 import net.peter.peterpvemod.item.ModCreativeModTab;
 import net.peter.peterpvemod.item.ModItem;
 
@@ -27,6 +28,8 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).explosionResistance(999).strength(30f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), ModCreativeModTab.PETER_PVE_MOD_TAB);
 
     public static final RegistryObject<Block> CAMO_BLOCK = registerBlock("camo", () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES).strength(2f).noCollission().requiresCorrectToolForDrops()), ModCreativeModTab.PETER_PVE_MOD_TAB);
+
+    public static final RegistryObject<Block> LAUNCH_PAD_BLOCK = registerBlock("launch_pad", () -> new LauncPadBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).strength(2f).requiresCorrectToolForDrops()), ModCreativeModTab.PETER_PVE_MOD_TAB);
 
     public static void register(IEventBus eventBus){
         BLOCKS.register(eventBus);

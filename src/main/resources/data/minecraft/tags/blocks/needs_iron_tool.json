@@ -1,6 +1,7 @@
 {
   "replace": "false",
   "values": [
-    "peterpvemod:camo"
+    "peterpvemod:camo",
+    "peterpvemod:launch_pad"
   ]
 }

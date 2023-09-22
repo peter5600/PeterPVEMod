@@ -5,5 +5,6 @@
   "itemGroup.peterpvemodtab": "Peter's PVE Mod",
 
   "block.peterpvemod.reinforced_concrete": "Block Of Reinforced Concrete",
-  "block.peterpvemod.camo": "Camo Block"
+  "block.peterpvemod.camo": "Camo Block",
+  "block.peterpvemod.launch_pad": "Launch Pad"
 }

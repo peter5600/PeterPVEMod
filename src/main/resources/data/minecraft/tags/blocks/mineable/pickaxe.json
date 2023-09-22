@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "peterpvemod:reinforced_concrete"
+    "peterpvemod:reinforced_concrete",
+    "peterpvemod:launch_pad"
   ]
 }
