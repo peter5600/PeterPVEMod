@@ -1,4 +1,9 @@
 {
   "item.peterpvemod.radio": "Radio",
-  "itemGroup.peterpvemodtab": "Peter's PVE Mod"
+  "item.peterpvemod.reinforced_concrete": "Reinforced Concrete",
+  "item.peterpvemod.camo": "Camouflage",
+  "itemGroup.peterpvemodtab": "Peter's PVE Mod",
+
+  "block.peterpvemod.reinforced_concrete": "Block Of Reinforced Concrete",
+  "block.peterpvemod.camo": "Camo Block"
 }

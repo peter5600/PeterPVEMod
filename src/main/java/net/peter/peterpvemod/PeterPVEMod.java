@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.peter.peterpvemod.block.ModBlocks;
 import net.peter.peterpvemod.item.ModItem;
 import org.slf4j.Logger;
 
@@ -23,6 +24,7 @@ public class PeterPVEMod
 
         //Call my class to register my items.
         ModItem.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
