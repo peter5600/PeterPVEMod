@@ -11,6 +11,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
+import net.peter.peterpvemod.networking.ModMessages;
+import net.peter.peterpvemod.networking.packet.RegisterContractC2SPacket;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -24,7 +26,8 @@ public class RadioItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         //Make sure this happens on the server side not client side
         if(!level.isClientSide() && hand == InteractionHand.MAIN_HAND){
-            outputMessage(player);
+            //outputMessage(player);
+            ModMessages.sendToServer(new RegisterContractC2SPacket());
             player.getCooldowns().addCooldown(this, 60);//3 second cool down
         }
 

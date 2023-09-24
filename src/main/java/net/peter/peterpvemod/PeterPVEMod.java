@@ -10,6 +10,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.peter.peterpvemod.block.ModBlocks;
 import net.peter.peterpvemod.item.ModItem;
+import net.peter.peterpvemod.networking.ModMessages;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -33,7 +34,10 @@ public class PeterPVEMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(() -> {
+            //Not sure why but this must be at the top of enqueue work
+            ModMessages.register();
+        });
     }
 
 
