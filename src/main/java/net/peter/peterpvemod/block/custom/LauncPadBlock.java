@@ -12,8 +12,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
-import javax.annotation.Nullable;
-
 public class LauncPadBlock extends Block {
     public LauncPadBlock(Properties properties) {
         super(properties);
