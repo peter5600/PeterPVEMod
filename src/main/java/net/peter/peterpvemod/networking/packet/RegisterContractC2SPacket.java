@@ -1,7 +1,12 @@
 package net.peter.peterpvemod.networking.packet;
 
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkEvent;
+import net.peter.peterpvemod.contract.Contract;
+import net.peter.peterpvemod.contract.PlayerContractProvider;
 
 import java.util.function.Supplier;
 
@@ -27,11 +32,20 @@ public class RegisterContractC2SPacket {
         //only runs on server
         context.enqueueWork(() -> {
 
-            //Check if contract is on server.
+            ServerPlayer player = context.getSender();
+            ServerLevel level = player.getLevel();
+            player.sendSystemMessage(Component.literal("Hello test"));
+//            player.getCapability(PlayerContractProvider.PLAYER_CONTRACTS).ifPresent(contractHandler -> {
+//                //Check if contract is on server.
+//                Contract contract = contractHandler.getContracts();
+//                //If yes Message Contract
+//                if(contract.getContractName().isEmpty()){
+//                    contractHandler.addContract();
+//                }
+//                player.sendSystemMessage(Component.literal(contract.getContractString()));
+//            });
 
-            //If yes Message Contract
 
-            //If no create contract and output that it was created.
 
         });
         return true;
