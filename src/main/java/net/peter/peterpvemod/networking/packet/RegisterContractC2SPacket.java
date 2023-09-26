@@ -35,15 +35,15 @@ public class RegisterContractC2SPacket {
             ServerPlayer player = context.getSender();
             ServerLevel level = player.getLevel();
             player.sendSystemMessage(Component.literal("Hello test"));
-//            player.getCapability(PlayerContractProvider.PLAYER_CONTRACTS).ifPresent(contractHandler -> {
-//                //Check if contract is on server.
-//                Contract contract = contractHandler.getContracts();
-//                //If yes Message Contract
-//                if(contract.getContractName().isEmpty()){
-//                    contractHandler.addContract();
-//                }
-//                player.sendSystemMessage(Component.literal(contract.getContractString()));
-//            });
+            player.getCapability(PlayerContractProvider.PLAYER_CONTRACTS).ifPresent(contractHandler -> {
+                //Check if contract is on server.
+                Contract contract = contractHandler.getContracts();
+                //If yes Message Contract
+                if(contract.getContractName().isEmpty()){
+                    contractHandler.addContract();
+                }
+                player.sendSystemMessage(Component.literal(contract.getContractString()));
+            });
 
 
 
